@@ -1,3 +1,5 @@
 config-file = config.main.ghostty
 font-family = Paper Mono
-font-size = 13
+font-size = 12
+window-padding-y = 21
+window-padding-x = 20

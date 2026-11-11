@@ -1,6 +1,11 @@
 config-file = config.main.ghostty
+command = /opt/homebrew/bin/fish --login
+window-padding-x = 30
+window-padding-y = 15
 font-family = Paper Mono
 font-size = 13
 font-thicken = true
 macos-option-as-alt = left
 theme = Base2Tone Suburb Dark hc
+background-opacity = 0.97
+background-blur = true

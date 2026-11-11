@@ -8,6 +8,8 @@ Either clone/copy directly into =~/.config/ghostty/=, or create a symbolic link.
 config-file = config.linux.ghostty
 #+end_src
 
+Themes must be in =~/.config/ghostty/themes= to load correctly. This will clash with any outstanding themes in your setup. No elegant solution known at present.
+
 ** Contents
 Besides config directives, the bundle ships with a collection of themes and shaders. Themes are mostly ports from Kitty's Base2Tone themes, as well as a bunch of themes produced in the same vein; The shaders are for cursor animations.
 

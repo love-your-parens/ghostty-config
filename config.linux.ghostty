@@ -1,0 +1,3 @@
+config-file = config.main.ghostty
+font-family = Paper Mono
+font-size = 13

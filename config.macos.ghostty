@@ -1,0 +1,6 @@
+config-file = config.main.ghostty
+font-family = Paper Mono
+font-size = 13
+font-thicken = true
+macos-option-as-alt = left
+theme = Base2Tone Suburb Dark hc

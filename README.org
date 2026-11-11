@@ -1,0 +1,13 @@
+#+title: Readme
+
+* Ghostty settings
+** Usage
+Either clone/copy directly into =~/.config/ghostty/=, or create a symbolic link. Then include the appropriate variant of the settings file in your main config (=~/.config/ghostty/config=), for example:
+
+#+begin_src toml
+config-file = config.linux.ghostty
+#+end_src
+
+** Contents
+Besides config directives, the bundle ships with a collection of themes and shaders. Themes are mostly ports from Kitty's Base2Tone themes, as well as a bunch of themes produced in the same vein; The shaders are for cursor animations.
+

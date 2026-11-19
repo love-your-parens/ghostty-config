@@ -2,13 +2,34 @@
 
 * Ghostty settings
 ** Usage
-Either clone/copy directly into =~/.config/ghostty/=, or create a symbolic link. Then include the appropriate variant of the settings file in your main config (=~/.config/ghostty/config=), for example:
+1. Either clone/copy directly into =~/.config/ghostty/=, or create a symbolic link;
+2. Include the appropriate variant of the settings file in your main config (=~/.config/ghostty/config= or =~/.config/ghostty/config.ghostty=), for example:
 
 #+begin_src toml
 config-file = config.linux.ghostty
 #+end_src
 
-Themes must be in =~/.config/ghostty/themes= to load correctly. This will clash with any outstanding themes in your setup. No elegant solution known at present.
+Or, use a lazy little script:
+#+begin_src shell
+if [ -e ~/.config/ghostty/config.ghostty ]
+then
+    echo "Main config file already exists, aborting."
+else
+    case "$(uname -s)" in
+        "Darwin")
+            echo "config-file = config.macos.ghostty" > ~/.config/ghostty/config.ghostty
+            ;;
+        "Linux")
+            echo "config-file = config.linux.ghostty" > ~/.config/ghostty/config.ghostty
+            ;;
+        ,*)
+            echo "Unrecognised operating system, aborting."
+            ;;
+    esac
+fi
+#+end_src
+
+Themes must be in =~/.config/ghostty/themes= to load correctly. This will clash with any outstanding themes in your setup. No elegant solution is known at present.
 
 ** Contents
 Besides config directives, the bundle ships with a collection of themes and shaders. Themes are mostly ports from Kitty's Base2Tone themes, as well as a bunch of themes produced in the same vein; The shaders are for cursor animations.

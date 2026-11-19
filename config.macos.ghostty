@@ -7,5 +7,5 @@ font-size = 13
 font-thicken = true
 macos-option-as-alt = left
 theme = Base2Tone Suburb Dark hc
-background-opacity = 0.97
+background-opacity = 0.95
 background-blur = true
